@@ -5,13 +5,13 @@ import 'package:chopperblocpagination/models/coin_model_eur.dart';
 import 'package:chopperblocpagination/services/api_services.dart';
 import './bloc.dart';
 
-class CoinBloc extends Bloc<CoinEurEvent, CoinEurState> {
+class CoinEurBloc extends Bloc<CoinEurEvent, CoinEurState> {
   final int limit;
   final String tsym;
   final int page;
   List<CoinEur> coins = [];
 
-  CoinBloc({this.limit, this.tsym, this.page});
+  CoinEurBloc({this.limit, this.tsym, this.page});
 
   @override
   CoinEurState get initialState => InitialCoinEurState();

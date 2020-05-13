@@ -3,7 +3,7 @@ import 'package:bloc/bloc.dart';
 import 'package:chopper/chopper.dart';
 import 'package:chopperblocpagination/models/coin_model.dart';
 import 'package:chopperblocpagination/services/api_services.dart';
-import './bloc.dart';
+import 'bloc.dart';
 
 class CoinBloc extends Bloc<CoinEvent, CoinState> {
   final int limit;

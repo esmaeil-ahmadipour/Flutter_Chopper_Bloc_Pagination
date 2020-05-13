@@ -1,4 +1,5 @@
-import 'package:chopperblocpagination/pages/home.dart';
+import 'package:chopperblocpagination/pages/usd_page.dart';
+import 'package:chopperblocpagination/pages/eur_page.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
@@ -22,8 +23,8 @@ class MainPage extends StatelessWidget {
            ),
           body: TabBarView(
             children: [
-              HomePage(),
-              HomePage(),
+              UsdPage(),
+              EurPage(),
             ],
           ),
         ),

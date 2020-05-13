@@ -1,14 +1,14 @@
-import 'package:chopperblocpagination/blocs/bloc.dart';
-import 'package:chopperblocpagination/blocs/coin_bloc.dart';
+import 'package:chopperblocpagination/blocs/bloc_usd/bloc.dart';
+import 'package:chopperblocpagination/blocs/bloc_usd/coin_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class HomePage extends StatefulWidget {
+class UsdPage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _UsdPageState createState() => _UsdPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _UsdPageState extends State<UsdPage> {
   CoinBloc coinBloc;
   @override
   void initState() {
