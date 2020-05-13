@@ -28,21 +28,15 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Online Pagination", style: TextStyle(color: Colors.purple),),
-      ),
-      body: BlocBuilder<CoinBloc, CoinState>(
-          bloc: coinBloc,
-          builder: (context, CoinState state) {
-            return Container(
-              color: Colors.black,
-              width: double.infinity,
-              child: _buildBody(state),
-            );
-          }),
-    );
+    return BlocBuilder<CoinBloc, CoinState>(
+        bloc: coinBloc,
+        builder: (context, CoinState state) {
+          return Container(
+            color: Colors.black,
+            width: double.infinity,
+            child: _buildBody(state),
+          );
+        });
   }
 
   _buildBody(CoinState state) {

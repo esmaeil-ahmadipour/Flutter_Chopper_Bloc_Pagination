@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'coin_model.g.dart';
+part 'coin_model_eur.g.dart';
 
 @JsonSerializable(nullable: false)
-class Coin  {
+class CoinEur  {
   final String name;
   final String fullName;
   final double price;
 
-  const Coin(
+  const CoinEur(
       {@required this.name, @required this.fullName, @required this.price});
 
-  factory Coin.fromJson(Map<String, dynamic> json) => _$CoinFromJson(json);
+  factory CoinEur.fromJson(Map<String, dynamic> json) => _$CoinEurFromJson(json);
 
-  Map<String, dynamic> toJson() => _$CoinToJson(this);
+  Map<String, dynamic> toJson() => _$CoinEurToJson(this);
 }
