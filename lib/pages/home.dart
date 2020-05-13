@@ -102,17 +102,28 @@ class _HomePageState extends State<HomePage> {
         ),
       );
     } else if (state is ErrorCoinState) {
-      return Center(
-        child: Text(
-          'Error loading coins!\nPlease check your connections.',
-          style: TextStyle(
-            color: Theme
-                .of(context)
-                .accentColor,
-            fontSize: 18.0,
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            'Error loading coins!\nPlease check your connections.',
+            style: TextStyle(
+              color: Theme
+                  .of(context)
+                  .accentColor,
+              fontSize: 18.0,
+            ),
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
-        ),
+          RaisedButton(
+            child: Text('Retry'),
+            onPressed:(){
+              coinBloc.add(RefreshCoins());
+            } ,
+          ),
+        ],
+
       );
     }
   }
